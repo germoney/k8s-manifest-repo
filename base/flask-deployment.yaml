@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mg-flask-backend
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mg-flask-backend
+  template:
+    metadata:
+      labels:
+        app: mg-flask-backend
+    spec:
+      containers:
+        - name: mg-flask-backend
+          image: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/mg-flask-backend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

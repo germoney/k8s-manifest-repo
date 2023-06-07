@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-middle
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-middle
+  template:
+    metadata:
+      labels:
+        app: demo-middle
+    spec:
+      containers:
+        - name: demo-middle
+          image: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/demo-middle:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
