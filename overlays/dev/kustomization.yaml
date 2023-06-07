@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/demo-front
   newName: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/demo-front
-  newTag: ef02674d
+  newTag: 848d41d9
 - name: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/demo-frontend
   newName: 204467564126.dkr.ecr.ap-northeast-2.amazonaws.com/demo-frontend
   newTag: abcdefg
